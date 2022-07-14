@@ -12,13 +12,13 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 setup(
-    name="prefect-profiling",
+    name="prefect-memory-profiling",
     description="A collection of Prefect Tasks for different varieties of profiling",
     license="Apache License 2.0",
     author="Nathan Nowack",
     author_email="nate@prefect.io",
     keywords="prefect",
-    url="https://github.com/zzstoatzz/prefect-profiling",
+    url="https://github.com/zzstoatzz/prefect-memory-profiling",
     long_description=readme,
     long_description_content_type="text/markdown",
     version=versioneer.get_version(),

@@ -1,6 +1,6 @@
-site_name: prefect-profiling
-site_url: https://zzstoatzz.github.io/prefect-profiling
-repo_url: https://github.com/zzstoatzz/prefect-profiling
+site_name: prefect-memory-profiling
+site_url: https://zzstoatzz.github.io/prefect-memory-profiling
+repo_url: https://github.com/zzstoatzz/prefect-memory-profiling
 edit_uri: /edit/main/docs/
 theme:
   name: material

@@ -13,7 +13,7 @@ def test_hello_prefect_memory_profiling():
 
     flow_state = test_flow()
     task_state = flow_state.result()
-    assert task_state.result() == "Hello, prefect-profiling!"
+    assert task_state.result() == "Hello, prefect-memory-profiling!"
 
 
 def goodbye_hello_prefect_memory_profiling():
@@ -23,4 +23,4 @@ def goodbye_hello_prefect_memory_profiling():
 
     flow_state = test_flow()
     task_state = flow_state.result()
-    assert task_state.result() == "Goodbye, prefect-profiling!"
+    assert task_state.result() == "Goodbye, prefect-memory-profiling!"

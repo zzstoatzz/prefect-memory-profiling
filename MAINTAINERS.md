@@ -1,4 +1,4 @@
-# prefect-profiling
+# prefect-memory-profiling
 
 ## Getting Started
 
@@ -29,13 +29,13 @@ https://github.com/organizations/zzstoatzz/repositories/new
 
 Upon creation, push the repository to GitHub:
 ```bash
-git remote add origin https://github.com/zzstoatzz/prefect-profiling.git
+git remote add origin https://github.com/zzstoatzz/prefect-memory-profiling.git
 git branch -M main
 git push -u origin main
 ```
 
 It's recommended to setup some protection rules for main at:
-https://github.com/zzstoatzz/prefect-profiling/settings/branches
+https://github.com/zzstoatzz/prefect-memory-profiling/settings/branches
 
 - Require a pull request before merging
 - Require approvals
@@ -103,7 +103,7 @@ Once you've obtained a PyPI API token, [create a GitHub secret](https://docs.git
 
 To create publish a new version of your collection, [create a new GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) and tag it with the version that you want to deploy (e.g. v0.3.2). This will trigger workflow to publish the new version on PyPI and deploy the updated docs to GitHub pages.
 
-Upon publishing, a `docs` branch is automatically created. To hook this up to GitHub Pages, simply head over to https://github.com/PrefectHQ/prefect-profiling/settings/pages, select `docs` under the dropdown menu, keep the default `/root` folder, `Save`, and upon refresh, you should see a prompt stating "Your site is published at https://<username>.github.io/<repository>".
+Upon publishing, a `docs` branch is automatically created. To hook this up to GitHub Pages, simply head over to https://github.com/PrefectHQ/prefect-memory-profiling/settings/pages, select `docs` under the dropdown menu, keep the default `/root` folder, `Save`, and upon refresh, you should see a prompt stating "Your site is published at https://<username>.github.io/<repository>".
 
 ## Further guidance
 

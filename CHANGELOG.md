@@ -25,4 +25,4 @@ Released on ????? ?th, 20??.
 
 ### Added
 
-- `task_name` task - [#1](https://github.com/zzstoatzz/prefect-profiling/pull/1)
+- `task_name` task - [#1](https://github.com/zzstoatzz/prefect-memory-profiling/pull/1)

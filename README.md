@@ -1,4 +1,4 @@
-# prefect-profiling
+# prefect-memory-profiling
 
 ## Welcome!
 
@@ -16,10 +16,10 @@ These tasks are designed to work with Prefect 2.0. For more information about ho
 
 ### Installation
 
-Install `prefect-profiling` with `pip`:
+Install `prefect-memory-profiling` with `pip`:
 
 ```bash
-pip install prefect-profiling
+pip install prefect-memory-profiling
 ```
 
 ### Write and run a flow
@@ -42,18 +42,18 @@ example_flow()
 
 ## Resources
 
-If you encounter any bugs while using `prefect-profiling`, feel free to open an issue in the [prefect-profiling](https://github.com/zzstoatzz/prefect-profiling) repository.
+If you encounter any bugs while using `prefect-memory-profiling`, feel free to open an issue in the [prefect-memory-profiling](https://github.com/zzstoatzz/prefect-memory-profiling) repository.
 
-If you have any questions or issues while using `prefect-profiling`, you can find help in either the [Prefect Discourse forum](https://discourse.prefect.io/) or the [Prefect Slack community](https://prefect.io/slack).
+If you have any questions or issues while using `prefect-memory-profiling`, you can find help in either the [Prefect Discourse forum](https://discourse.prefect.io/) or the [Prefect Slack community](https://prefect.io/slack).
 
 ## Development
 
-If you'd like to install a version of `prefect-profiling` for development, clone the repository and perform an editable install with `pip`:
+If you'd like to install a version of `prefect-memory-profiling` for development, clone the repository and perform an editable install with `pip`:
 
 ```bash
-git clone https://github.com/zzstoatzz/prefect-profiling.git
+git clone https://github.com/zzstoatzz/prefect-memory-profiling.git
 
-cd prefect-profiling/
+cd prefect-memory-profiling/
 
 pip install -e ".[dev]"
 
