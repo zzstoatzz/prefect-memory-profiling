@@ -31,18 +31,3 @@ def profiled_task(
             **task_init_kwargs,
         )
     return ProfiledTask(fn=fn, **task_init_kwargs)
-
-@profiled_task(name='My Profiled Task', stream=open('logfile.txt', 'a+'))
-def resource_intensive_task(n: int = 100):
-    a = [n**n for n in range(2*n)]
-    b = [n**n for n in range(4*n)]
-    c = [n**n for n in range(n**2)]
-                
-    return sum(a + b + c)
-
-@flow
-def testing():
-    resource_intensive_task()
-    
-if __name__ == "__main__":
-    testing()
