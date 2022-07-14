@@ -1,1 +1,1 @@
-::: prefect_profiling.flows
+::: prefect_memory_profiling.flows

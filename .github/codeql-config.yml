@@ -1,4 +1,4 @@
 paths-ignore:
   - tests/**/test_*.py
   - versioneer.py
-  - prefect_profiling/_version.py
+  - prefect_memory_profiling/_version.py

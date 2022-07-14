@@ -7,8 +7,8 @@
       "full_name": "Nathan Nowack",
       "email": "nate@prefect.io",
       "github_organization": "zzstoatzz",
-      "collection_name": "prefect-profiling",
-      "collection_slug": "prefect_profiling",
+      "collection_name": "prefect-memory-profiling",
+      "collection_slug": "prefect_memory_profiling",
       "collection_short_description": "A collection of Prefect Tasks for different varieties of profiling",
       "_copy_without_render": [
         ".github/workflows/*.yml"

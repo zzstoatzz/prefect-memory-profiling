@@ -1,1 +1,1 @@
-prefect_profiling/_version.py export-subst
+prefect__memory_profiling/_version.py export-subst

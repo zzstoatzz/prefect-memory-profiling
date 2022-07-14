@@ -26,16 +26,16 @@ pip install prefect-profiling
 
 ```python
 from prefect import flow
-from prefect_profiling.tasks import (
-    goodbye_prefect_profiling,
-    hello_prefect_profiling,
+from prefect_memory_profiling.tasks import (
+    goodbye_prefect_memory_profiling,
+    hello_prefect_memory_profiling,
 )
 
 
 @flow
 def example_flow():
-    hello_prefect_profiling
-    goodbye_prefect_profiling
+    hello_prefect_memory_profiling
+    goodbye_prefect_memory_profiling
 
 example_flow()
 ```

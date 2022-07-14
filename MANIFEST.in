@@ -1,2 +1,2 @@
 include versioneer.py
-include prefect_profiling/_version.py
+include prefect_memory_profiling/_version.py

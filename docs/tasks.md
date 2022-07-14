@@ -1,1 +1,1 @@
-::: prefect_profiling.tasks
+::: prefect_memory_profiling.tasks
