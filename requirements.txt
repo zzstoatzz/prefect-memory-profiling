@@ -80,7 +80,7 @@ leather==0.3.4
 locket==1.0.0
 Logbook==1.5.3
 Mako==1.2.0
-MarkupSafe==2.0.1
+MarkupSafe==2.1.1
 marshmallow==3.16.0
 marshmallow-oneofschema==3.0.1
 mashumaro==2.9
