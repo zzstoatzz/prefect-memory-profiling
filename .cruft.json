@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/PrefectHQ/prefect-collection-template",
+  "commit": "414cbf5b796ad035be0518a88631c0ebbfa0fb3a",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Nathan Nowack",
+      "email": "nate@prefect.io",
+      "github_organization": "zzstoatzz",
+      "collection_name": "prefect-profiling",
+      "collection_slug": "prefect_profiling",
+      "collection_short_description": "A collection of Prefect Tasks for different varieties of profiling",
+      "_copy_without_render": [
+        ".github/workflows/*.yml"
+      ],
+      "_template": "https://github.com/PrefectHQ/prefect-collection-template"
+    }
+  },
+  "directory": null
+}
