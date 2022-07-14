@@ -93,7 +93,7 @@ msrest==0.6.21
 multidict==6.0.2
 mypy-extensions==0.4.3
 networkx==2.8.3
-numpy==1.22.4
+numpy==1.23.1
 nvidia-ml-py3==7.352.0
 oauthlib==3.2.0
 opencensus==0.9.0
