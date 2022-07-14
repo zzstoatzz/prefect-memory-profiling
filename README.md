@@ -2,7 +2,7 @@
 
 ## Welcome!
 
-A collection of Prefect Tasks for different varieties of profiling
+A collection of Prefect Tasks for memory profiling in Prefect 2.0
 
 ## Getting Started
 
