@@ -75,7 +75,7 @@ jmespath==1.0.0
 jsonschema==3.1.1
 keyring==23.5.1
 kiwisolver==1.4.2
-kubernetes==23.6.0
+kubernetes==24.2.0
 leather==0.3.4
 locket==1.0.0
 Logbook==1.5.3
