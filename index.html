@@ -438,30 +438,33 @@
 
 <h1 id="prefect-memory-profiling">prefect-memory-profiling</h1>
 <h2 id="welcome">Welcome!</h2>
-<p>A collection of Prefect Tasks for memory profiling in Prefect 1.0</p>
+<p>A collection of Prefect Tasks for memory profiling in Prefect 1.0.</p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="python-setup">Python setup</h3>
 <p>Requires an installation of Python 3.7+.</p>
-<p>We recommend using a Python virtual environment manager such as pipenv, conda or virtualenv.</p>
-<p>These tasks are designed to work with Prefect 2.0. For more information about how to use Prefect, please refer to the <a href="https://orion-docs.prefect.io/">Prefect documentation</a>.</p>
+<p>We recommend using a Python virtual environment manager such as <code>pipenv</code>, <code>conda</code> or <code>virtualenv</code>.</p>
+<p>For more information about how to use Prefect, please refer to the <a href="https://docs.prefect.io/">Prefect documentation</a>.</p>
 <h3 id="installation">Installation</h3>
 <p>Install <code>prefect-memory-profiling</code> with <code>pip</code>:</p>
 <div class="highlight"><pre><span></span><code>pip install prefect-memory-profiling
 </code></pre></div>
 <h3 id="write-and-run-a-flow">Write and run a flow</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">flow</span>
-<span class="kn">from</span> <span class="nn">prefect_memory_profiling.tasks</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">goodbye_prefect_memory_profiling</span><span class="p">,</span>
-    <span class="n">hello_prefect_memory_profiling</span><span class="p">,</span>
-<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">Flow</span>
+<span class="kn">from</span> <span class="nn">prefect_memory_profiling.tasks</span> <span class="kn">import</span> <span class="n">profiled_task</span>
 
+<span class="nd">@profiled_task</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;My Profiled Task&#39;</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;logfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a+&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">resource_intensive_task</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)]</span>
 
-<span class="nd">@flow</span>
-<span class="k">def</span> <span class="nf">example_flow</span><span class="p">():</span>
-    <span class="n">hello_prefect_memory_profiling</span>
-    <span class="n">goodbye_prefect_memory_profiling</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
 
-<span class="n">example_flow</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">Flow</span><span class="p">(</span><span class="s1">&#39;Memory Profiled Flow&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">flow</span><span class="p">:</span>
+    <span class="n">resource_intensive_task</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">flow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run_on_schedule</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="resources">Resources</h2>
 <p>If you encounter any bugs while using <code>prefect-memory-profiling</code>, feel free to open an issue in the <a href="https://github.com/zzstoatzz/prefect-memory-profiling">prefect-memory-profiling</a> repository.</p>
