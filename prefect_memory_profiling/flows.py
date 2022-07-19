@@ -1,5 +1,5 @@
-from prefect import flow
-from prefect_memory_profiling.tasks import profiled_task
+from prefect import Flow
+from tasks import profiled_task
 
 @profiled_task(name='My Profiled Task', stream=open('logfile.txt', 'a+'))
 def resource_intensive_task(n: int = 100):
@@ -9,6 +9,8 @@ def resource_intensive_task(n: int = 100):
                 
     return sum(a + b + c)
 
-@flow
-def testing():
+with Flow('Memory Profiled Flow') as flow:
     resource_intensive_task()
+    
+if __name__ == "__main__":
+    flow.run(run_on_schedule=False)
