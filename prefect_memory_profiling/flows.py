@@ -7,8 +7,10 @@ def resource_intensive_task(n: int = 100):
     a = [n**n for n in range(2*n)]
     b = [n**n for n in range(4*n)]
     c = [n**n for n in range(n**2)]
-                
-    return sum(a + b + c)
+    
+    del c
+    
+    return sum(a + b)
 
 @flow
 def my_profiled_flow():
