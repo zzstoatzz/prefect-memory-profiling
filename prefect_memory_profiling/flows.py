@@ -1,7 +1,6 @@
-from prefect import Flow
-from tasks import profiled_task
+from prefect import Flow, task
 
-@profiled_task(name='My Profiled Task', stream=open('logfile.txt', 'a+'))
+@task(name='My Profiled Task')
 def resource_intensive_task(n: int = 100):
     a = [n**n for n in range(2*n)]
     b = [n**n for n in range(4*n)]
