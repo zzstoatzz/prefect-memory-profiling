@@ -1,7 +1,8 @@
-from prefect import Flow
+from decimal import Decimal
+from prefect import flow, get_run_logger
 from tasks import profiled_task
 
-@profiled_task(name='My Profiled Task', stream=open('logfile.txt', 'a+'))
+@profiled_task(name='My Profiled Task')
 def resource_intensive_task(n: int = 100):
     a = [n**n for n in range(2*n)]
     b = [n**n for n in range(4*n)]
@@ -9,8 +10,13 @@ def resource_intensive_task(n: int = 100):
                 
     return sum(a + b + c)
 
-with Flow('Memory Profiled Flow') as flow:
-    resource_intensive_task()
+@flow
+def my_profiled_flow():
+    logger = get_run_logger()
+    
+    my_really_big_sum = resource_intensive_task()
+    
+    logger.info(f'my_really_big_sum = {Decimal(my_really_big_sum):.3E}')
     
 if __name__ == "__main__":
-    flow.run(run_on_schedule=False)
+    my_profiled_flow()
